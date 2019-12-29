@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  db: 
+    build: ./db
+    environment:
+      MYSQL_DATABASE: songwon
+      MYSQL_ROOT_PASSWORD: songwon2020
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: songwon2020
+      DATABASE_HOST: db
+
+  web:
+    build: ./web
+    environment:
+      MYSQL_DATABASE: songwon
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: songwon2020
+      MYSQL_PORT: 3306
+      DATABASE_HOST: db
+    ports: 
+      # - 는 배열이라는 뜻이다.
+      - "3257:3257"
+    depends_on: 
+      - db
+    # node js가 더 빨리 빌드될 가능성이 있기에 failure가 될 경우 그냥 다시 하도록 한다.
+    restart: on-failure
+
+
+  

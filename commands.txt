@@ -1,0 +1,7 @@
+
+docker run -d -p 3306:3306 songwon-mysql:0.2
+
+
+docker exec -it xenodochial_margulis /bin/sh
+
+
