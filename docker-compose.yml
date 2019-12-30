@@ -4,7 +4,7 @@ services:
   db: 
     build: ./db
     environment:
-      MYSQL_DATABASE: songwon
+      MYSQL_DATABASE: bookdatabase
       MYSQL_ROOT_PASSWORD: songwon2020
       MYSQL_USER: mysql
       MYSQL_PASSWORD: songwon2020
@@ -13,7 +13,7 @@ services:
   web:
     build: ./web
     environment:
-      MYSQL_DATABASE: songwon
+      MYSQL_DATABASE: bookdatabase
       MYSQL_USER: mysql
       MYSQL_PASSWORD: songwon2020
       MYSQL_PORT: 3306

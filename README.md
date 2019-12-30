@@ -1,4 +1,2 @@
 
-## Docker-compose starting point
-
-Use this branch to work through the tutorial
+## NODE JS + MYSQL 간편 docker
