@@ -5,22 +5,25 @@ services:
     build: ./db
     environment:
       MYSQL_DATABASE: bookdatabase
-      MYSQL_ROOT_PASSWORD: songwon2020
-      MYSQL_USER: mysql
-      MYSQL_PASSWORD: songwon2020
+      MYSQL_ROOT_PASSWORD: thddnjs12!
+      MYSQL_USER: root
+      MYSQL_PASSWORD: thddnjs12!
       DATABASE_HOST: db
-
+    restart: always
+    volumes:
+      # - /my/custom/:/etc/mysql/conf.d/custom.cnf 일단 이거 하기 전에 conf.d 폴더의 cusotm.cnf 를 살펴봐야겠다
+  
   web:
     build: ./web
     environment:
       MYSQL_DATABASE: bookdatabase
-      MYSQL_USER: mysql
-      MYSQL_PASSWORD: songwon2020
+      MYSQL_USER: root
+      MYSQL_PASSWORD: thddnjs12!
       MYSQL_PORT: 3306
       DATABASE_HOST: db
     ports: 
       # - 는 배열이라는 뜻이다.
-      - "3257:3257"
+      - "8080:8080"
     depends_on: 
       - db
     # node js가 더 빨리 빌드될 가능성이 있기에 failure가 될 경우 그냥 다시 하도록 한다.

@@ -1,0 +1,18 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Mybrary API",
+    "description": "Documentation for Mybrary API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "contact": {
+      "name": "SONGWON LEE"
+    },
+    "servers": [
+      "http://localhost:8080"
+    ]
+  }
+}
