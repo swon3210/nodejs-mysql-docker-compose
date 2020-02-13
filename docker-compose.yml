@@ -11,7 +11,7 @@ services:
       DATABASE_HOST: db
     restart: always
     volumes:
-      # - /my/custom/:/etc/mysql/conf.d/custom.cnf 일단 이거 하기 전에 conf.d 폴더의 cusotm.cnf 를 살펴봐야겠다
+      - mysqldata
   
   web:
     build: ./web
